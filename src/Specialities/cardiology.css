@@ -1,0 +1,60 @@
+.bgcolor{
+    background-color:rgb(46, 190, 190);
+    font-size: 1.2em;
+}
+.cardiology-container {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-direction: column;
+    /* align-items: center; */
+    /* text-align: center; */
+  }
+  
+  .cardiology-heading {
+    text-align: left;
+  }
+  
+  /* .cardiology-paragraph {
+    
+  } */
+.threedabba{
+    display: flex;
+    gap:20px;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+.one{
+    border: 2px solid black;
+    padding: 10px;
+}
+.two{
+    border: 2px solid black;
+    padding: 10px;
+}
+.three{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 900px; /* Adjust the maximum width to your desired size */
+    margin: 0 auto;
+  }
+  
+  .video {
+    width: 100%;
+  }
+
+  .roundimg{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin: 30px;
+  }
+  .rndimg{
+    
+    text-align: center;
+  }

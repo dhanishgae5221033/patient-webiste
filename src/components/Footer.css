@@ -1,0 +1,19 @@
+
+footer {
+    display: flex;
+    background-color: #865DFF;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .left-section {
+    text-align: left;
+    margin-left: 10px;
+  }
+  
+  .right-section {
+    text-align: right;
+    margin-right: 20px;
+  }

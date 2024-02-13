@@ -1,0 +1,262 @@
+
+.outer-box {
+    width: 100%;
+    height: 100vh;
+    /* background-image: url('F:\New folder\ehr document\src\Nurse\bg1.jpg'); */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.box-container {
+    width: 82vw;
+    height: 40vh;
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .box-container .table-container {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    overflow: overlay;
+  }
+  
+  .box-container .table-container::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  .box-container .table-container::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+  }
+  
+  .box-container .table-container:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+  
+  .box-container table {
+    width: 100%;
+  }
+  
+  .box-container td img {
+    width: 36px;
+    height: 36px;
+    margin-right: .5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  
+  .box-container table,
+  .box-container th,
+  .box-container td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .box-container thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  
+  .box-container tbody tr:nth-child(even) {
+    background-color: #0000000b;
+  }
+  
+  .box-container tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay), background-color 0s;
+  }
+  
+  .box-container tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  .box-container tbody tr:hover {
+    background-color: #fff6 !important;
+  }
+  
+  .box-container tbody tr td,
+  .box-container tbody tr td p,
+  .box-container tbody tr td img {
+    transition: .2s ease-in-out;
+  }
+  
+  .box-container tbody tr.hide td,
+  .box-container tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: .2s ease-in-out .5s;
+  }
+  
+  .box-container tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: .2s ease-in-out .5s;
+  }
+  
+  .box-container .status {
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+  }
+  
+  .box-container .status.delivered {
+    background-color: #86e49d;
+    color: #006b21;
+  }
+  
+  .box-container .status.cancelled {
+    background-color: #d893a3;
+    color: #b30021;
+  }
+  
+  .box-container .status.pending {
+    background-color: #ebc474;
+  }
+  
+  .box-container .status.shipped {
+    background-color: #6fcaea;
+  }
+  
+  .box-container thead th span.icon-arrow {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 1.4px solid transparent;
+    text-align: center;
+    font-size: 1rem;
+    margin-left: .5rem;
+    transition: .2s ease-in-out;
+  }
+  
+  .box-container thead th:hover span.icon-arrow {
+    border: 1.4px solid #6c00bd;
+  }
+  
+  .box-container thead th:hover {
+    color: #6c00bd;
+  }
+  
+  .box-container thead th.active span.icon-arrow {
+    background-color: #6c00bd;
+    color: #fff;
+  }
+  
+  .box-container thead th.asc span.icon-arrow {
+    transform: rotate(180deg);
+  }
+  
+  .box-container thead th.active,
+  .box-container tbody td.active {
+    color: #6c00bd;
+  }
+  
+  .box-container .export__file {
+    position: relative;
+  }
+  
+  .box-container .export__file .export__file-btn {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+ 
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+  }
+  
+  .box-container .export__file .export__file-btn:hover {
+    background-color: #fff;
+    transform: scale(1.15);
+    cursor: pointer;
+  }
+  
+  .box-container .export__file input {
+    display: none;
+  }
+  
+  .box-container .export__file .export__file-options {
+    position: absolute;
+    right: 0;
+    width: 12rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0;
+    transform: scale(.8);
+    transform-origin: top right;
+    box-shadow: 0 .2rem .5rem #0004;
+    transition: .2s;
+  }
+  
+  .box-container .export__file input:checked + .export__file-options {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 100;
+  }
+  
+  .box-container .export__file .export__file-options label {
+    display: block;
+    width: 100%;
+    padding: .6rem 0;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .2s ease-in-out;
+  }
+  
+  .box-container .export__file .export__file-options label:first-of-type {
+    padding: 1rem 0;
+    background-color: #86e49d !important;
+  }
+  
+  .box-container .export__file .export__file-options label:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .box-container .export__file .export__file-options img {
+    width: 2rem;
+    height: auto;
+  }
+  
+  @media (max-width: 1000px) {
+    .box-container td:not(:first-of-type) {
+      min-width: 12.1rem;
+    }
+  }
+  
+  .appointment-table .acceptbtn {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .appointment-table .acceptbtn:hover {
+    background-color: #45a049;
+  }
+
+  

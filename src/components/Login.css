@@ -1,0 +1,26 @@
+
+.login_popup{
+    display: flex;
+    /* background-color: white;
+     */
+     
+    
+}
+
+.login_form{
+    width: 25%;
+    height: 300px;
+    
+}
+
+
+.img_login{
+    width: 25%;
+    height:240px;
+    margin-top: 0;
+}
+
+input{
+    width: 100%;
+}
+
